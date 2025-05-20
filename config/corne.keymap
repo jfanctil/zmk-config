@@ -19,6 +19,56 @@
         };
     };
 
+    macros {
+        macro_a_grave: macro_a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE &kp A>;
+
+            label = "MACRO_A_GRAVE";
+        };
+
+        macro_e_grave: macro_e_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE &kp E>;
+
+            label = "MACRO_E_GRAVE";
+        };
+
+        macro_a_circ: macro_a_circ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp CARET &kp A>;
+
+            label = "MACRO_A_CIRC";
+        };
+
+        macro_e_circ: macro_e_circ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp CARET &kp E>;
+
+            label = "MACRO_E_CIRC";
+        };
+
+        macro_u_grave: macro_u_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE &kp U>;
+
+            label = "MACRO_U_GRAVE";
+        };
+
+        macro_e_acute: macro_e_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LALT &kp E &kp E>;
+
+            label = "MACRO_E_ACUTE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
