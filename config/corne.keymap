@@ -19,6 +19,16 @@
         };
     };
 
+    macros {
+        a_grave: a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE &kp A>;
+
+            label = "A_GRAVE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
