@@ -19,14 +19,6 @@
         };
     };
 
-    behaviors {
-      macro_a_grave: macro {
-        compatible = "zmk,behavior-macro";
-        label = "A_GRAVE";
-        bindings = <&macro_tap &kp GRAVE &kp A>;
-      };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
