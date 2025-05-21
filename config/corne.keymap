@@ -127,9 +127,9 @@
 
         accent_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans          &macro_e_circ   &macro_c_cedille
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans          &macro_e_grave  &macro_a_grave
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &macro_u_grave  &macro_e_acute  &macro_a_grave
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
