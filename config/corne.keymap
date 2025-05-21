@@ -20,61 +20,12 @@
         };
     };
 
-    macros {
-        macro_a_grave: macro_a_grave {
-            compatible = "zmk,behavior-macro";
+    behaviors {
+        behavior_capslock: behavior_capslock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BEHAVIOR_CAPSLOCK";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp GRAVE &kp A>;
-
-            label = "MACRO_A_GRAVE";
-        };
-
-        macro_e_grave: macro_e_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp GRAVE &kp E>;
-
-            label = "MACRO_E_GRAVE";
-        };
-
-        macro_a_circ: macro_a_circ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp CARET &kp A>;
-
-            label = "MACRO_A_CIRC";
-        };
-
-        macro_e_circ: macro_e_circ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp CARET &kp E>;
-
-            label = "MACRO_E_CIRC";
-        };
-
-        macro_u_grave: macro_u_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp GRAVE &kp U>;
-
-            label = "MACRO_U_GRAVE";
-        };
-
-        macro_e_acute: macro_e_acute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LALT &kp E &kp E>;
-
-            label = "MACRO_E_ACUTE";
-        };
-
-        macro_c_cedille: macro_c_cedille {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LALT &kp C>;
-
-            label = "MACRO_C_CEDILLE";
+            bindings = <&kp LSHIFT>, <&kp CAPS>;
         };
     };
 
@@ -89,10 +40,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &gresc
-                         &kp LGUI  &mo 1  &lt 3 SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESCAPE
+                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -123,15 +74,6 @@
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
-            >;
-        };
-
-        accent_layer {
-            bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none           &none           &none             &none           &none
-&none  &none  &none  &none  &none  &none    &none  &macro_a_grave  &macro_e_grave  &macro_c_cedille  &none           &none
-&none  &none  &none  &none  &none  &none    &none  &macro_a_grave  &macro_e_grave  &macro_u_grave    &macro_e_acute  &none
-                     &none  &none  &none    &none  &none           &none
             >;
         };
     };
